@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Application Form</title>
+</head>
+<body>
+    <h1>Internship Application Form</h1>
+    <form>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+        <label for="Dob">Date of Birth</label>
+        <input type="date" id="Dob" name="Dob" required>
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <input type="radio" id="genderMale" name="gender" value="male">
+        <label for="genderMale">Male</label>
+        <input type="radio" id="genderFemale" name="gender" value="female">
+        <label for="genderFemale">Female</label>
+        <input type="radio" id="genderOther" name="gender" value="other">
+        <label for="genderOther">Other</label>
+        <br><br>
+        <select name="course" id="course" required>
+            <option value="">Select a course</option>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+        </select>
+        <br><br>
+
+        <label for="skill">skills</label>
+        <input type="checkbox" id="skill" name="skill" value="programming" required>
+        <label for="skill">programming</label>
+        <input type="checkbox" id="skill2" name="skill" value="design" required>
+        <label for="skill2">design</label>
+        <input type="checkbox" id="skill3" name="skill" value="marketing" required>
+        <label for="skill3">marketing</label>
+        <br><br>
+
+        <input type="radio" id="internship" name="applicationType" value="internship" required>
+        <label for="internship">internship</label>
+        <input type="radio" id="fulltime" name="applicationType" value="fulltime" required>
+        <label for="fulltime">full-time</label>
+        <input type="radio" id="parttime" name="applicationType" value="parttime" required>
+        <label for="parttime">part-time</label>
+
+        <br><br>
+
+        <label for="resume">Resume</label>
+        <input type="file" id="resume" name="resume" required>
+        <br><br>
+
+        <label for="coverLetter">Cover Letter</label>
+        <input type="file" id="coverLetter" name="coverLetter" required>
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    
+</body>
+</html>
