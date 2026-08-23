@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Course Registration</title></head>
+<body>
+    <header><h1>Course Registration Form</h1></header>
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Student Details</legend>
+                <p><label for="name">Full Name:</label> <input type="text" id="name" name="name" required></p>
+                <p><label for="email">Email:</label> <input type="email" id="email" name="email" required></p>
+                <p><label for="course">Select Course:</label>
+                    <select id="course" name="course" required><option value="">Choose a course</option><option value="html">HTML Fundamentals</option><option value="java">Core Java</option><option value="python">Python Programming</option></select>
+                </p>
+                <p><button type="submit">Register</button></p>
+            </fieldset>
+        </form>
+        <h2>Available Course Schedules</h2>
+        <table border="1">
+            <tr><th>Day</th><th>Time</th><th>Instructor</th></tr>
+            <tr><td>Monday</td><td>10:00 AM - 12:00 PM</td><td>Neha Kapoor</td></tr>
+            <tr><td>Wednesday</td><td>2:00 PM - 4:00 PM</td><td>Arjun Mehta</td></tr>
+            <tr><td>Saturday</td><td>11:00 AM - 1:00 PM</td><td>Riya Singh</td></tr>
+        </table>
+    </main>
+</body>
+</html>
