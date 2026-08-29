@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+</head>
+<body>
+    <!-- 
+        Question 11: Student Information Form
+        Collects Name, Roll Number, and Course
+        Uses dropdown for course selection with default disabled option
+    -->
+    <h1>Student Information Form</h1>
+    
+    <form>
+        <!-- Name field -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <!-- Roll Number field -->
+        <label for="rollNumber">Roll Number:</label><br>
+        <input type="text" id="rollNumber" name="rollNumber" required><br><br>
+        
+        <!-- Course selection dropdown -->
+        <label for="course">Course:</label><br>
+        <select id="course" name="course" required>
+            <!-- Default disabled option -->
+            <option value="" disabled selected>Select Course</option>
+            <option value="ComputerScience">Computer Science</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Civil">Civil</option>
+            <option value="Electrical">Electrical</option>
+        </select><br><br>
+        
+        <!-- Submit button -->
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>

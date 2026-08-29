@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map Embed</title>
+</head>
+<body>
+    <!-- 
+        Question 2: Embed a Google Map using iframe
+        Includes title, width, height, and loading="lazy" attributes
+    -->
+    <h1>Google Map Embed</h1>
+    
+    <!-- 
+        loading="lazy" attribute defers loading the map until it comes into view
+        This improves page performance by not loading resources until they're needed
+    -->
+    <p>This is a Google Map showing a location:</p>
+    
+    <iframe 
+        title="Google Map showing location" 
+        width="100%" 
+        height="400" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.5234567!2d74.876!3d31.589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903de4b6cbbab%3A0xd01b6e2b4b4e4b4b!2sLahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1234567890" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frameset Layout</title>
+</head>
+<!-- 
+    Question 4: Create a frameset layout using deprecated <frameset> and <frame> tags
+    Top frame contains navigation links
+    Bottom frame displays a welcome message
+    Note: Framesets are deprecated but required for this assignment
+-->
+<frameset rows="100,*">
+    <!-- Top frame with navigation links -->
+    <frame src="question4_nav.html" name="navFrame" title="Navigation Frame">
+    
+    <!-- Bottom frame with welcome message -->
+    <frame src="question4_content.html" name="contentFrame" title="Content Frame">
+    
+    <!-- Fallback content for browsers that don't support framesets -->
+    <noframes>
+        <body>
+            <p>This page uses frames, which are not supported by your browser.</p>
+        </body>
+    </noframes>
+</frameset>
+
+</html>

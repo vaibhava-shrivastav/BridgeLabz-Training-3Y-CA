@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <!-- 
+        Question 7: Login Form with CSRF token
+    -->
+    <h1>Login Form</h1>
+    
+    <form>
+        <!-- Username field -->
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <!-- Password field -->
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <!-- 
+            Hidden CSRF token field
+            
+            CSRF Token Purpose:
+            A CSRF (Cross-Site Request Forgery) token is a security measure used to prevent
+            unauthorized actions on behalf of an authenticated user. When a form with a CSRF token
+            is submitted, the server verifies the token to ensure the request came from a legitimate
+            user session and not from a malicious third-party website. This protects against attacks
+            where a hacker tricks a user into performing unwanted actions on a website where they
+            are already authenticated.
+        -->
+        <input type="hidden" name="csrf_token" value="abc123xyz789token">
+        
+        <!-- Submit button -->
+        <input type="submit" value="Login">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Form</title>
+</head>
+<body>
+    <!-- 
+        Question 19: Form with security attributes
+        autocomplete="off" prevents browser from remembering form data
+    -->
+    <h1>Secure Form</h1>
+    
+    <!-- Form with autocomplete disabled -->
+    <form autocomplete="off">
+        <!-- Username field -->
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <!-- Password field -->
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <!-- Email field -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <!-- Submit button -->
+        <input type="submit" value="Login">
+    </form>
+    
+    <!-- Security explanation -->
+    <h2>Security Note:</h2>
+    <p>
+        The <strong>autocomplete="off"</strong> attribute disables browser autocomplete for this form.
+        This improves security by preventing the browser from storing and auto-filling sensitive information 
+        such as passwords, usernames, and email addresses. While users may find this less convenient, 
+        it significantly reduces the risk of unauthorized access if someone gains physical access to the computer.
+        This is especially important for forms on public computers, financial websites, and healthcare portals.
+    </p>
+    
+</body>
+</html>

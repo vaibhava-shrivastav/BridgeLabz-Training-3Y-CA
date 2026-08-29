@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URI Encoding</title>
+</head>
+<body>
+    <!-- 
+        Question 16: URI Encoding Demonstration
+        Shows how special characters in URLs need to be encoded
+    -->
+    <h1>URI Encoding Demonstration</h1>
+    
+    <p>
+        <strong>Original URL with special characters:</strong><br>
+        https://example.com/search?query=HTML &amp; CSS
+    </p>
+    
+    <p>
+        <strong>Problem:</strong> The ampersand (&amp;) and spaces in the query parameter need to be encoded.
+    </p>
+    
+    <p>
+        <strong>Correctly Encoded URL:</strong><br>
+        https://example.com/search?query=HTML%20%26%20CSS
+    </p>
+    
+    <p>
+        <strong>Explanation:</strong>
+    </p>
+    <ul>
+        <li>Space is encoded as %20</li>
+        <li>Ampersand (&amp;) is encoded as %26</li>
+        <li>Other special characters follow similar patterns</li>
+    </ul>
+    
+    <!-- Hyperlink with encoded URL -->
+    <p>
+        <a href="https://example.com/search?query=HTML%20%26%20CSS">Click here to search for "HTML &amp; CSS"</a>
+    </p>
+    
+</body>
+</html>
