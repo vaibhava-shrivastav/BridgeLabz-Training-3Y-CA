@@ -1,0 +1,181 @@
+/* 
+   Question 3: Team Members Layout CSS
+   Demonstrates flexbox, box model, responsive design, and card styling
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Main content area */
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Flexbox container for team cards in one row */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Team card base styling using box model */
+.team-card {
+    background: white;
+    /* Uniform padding creates internal spacing */
+    padding: 2rem;
+    /* Margins create spacing between cards */
+    margin: 1rem;
+    /* Border defines card boundary */
+    border: 2px solid #e0e0e0;
+    /* Rounded corners for modern look */
+    border-radius: 12px;
+    /* Box shadow creates depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Fixed width for uniform card size */
+    width: 280px;
+    text-align: center;
+    /* Smooth transition for hover effects */
+    transition: all 0.3s ease;
+    /* Flexbox for vertical alignment of content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Card hover effect - enlarges and changes background */
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+/* Special styling for team lead card */
+.team-card.team-lead {
+    border: 3px solid #667eea;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    transform: scale(1.05);
+}
+
+.team-card.team-lead:hover {
+    border-color: #764ba2;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+/* Team member image */
+.team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid #667eea;
+}
+
+.team-card.team-lead img {
+    border-color: #764ba2;
+}
+
+/* Team member name */
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+/* Team member role */
+.team-card .role {
+    font-size: 1rem;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Team member description */
+.team-card .description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+/* Responsive design - single column on smaller screens */
+@media (max-width: 1024px) {
+    .team-container {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .team-card {
+        width: 250px;
+    }
+
+    .team-card.team-lead {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    /* Stack cards in single column on very small screens */
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0.5rem 0;
+    }
+
+    .team-card.team-lead {
+        transform: scale(1);
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}

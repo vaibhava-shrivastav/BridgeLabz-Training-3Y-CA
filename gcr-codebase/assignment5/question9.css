@@ -1,0 +1,193 @@
+/* 
+   Question 9: Magazine/Newspaper Column Layout CSS
+   Demonstrates CSS columns, column-span, float, and text justification
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Page header */
+.page-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Main magazine container with padding */
+.magazine-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 3rem;
+    background-color: white;
+}
+
+/* Magazine heading spanning all columns */
+.magazine-heading {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    /* Breaks column layout and spans all columns */
+    column-span: all;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 1rem;
+}
+
+/* Featured image floated to left */
+.featured-image {
+    float: left;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 2rem 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Column text container with multi-column layout */
+.column-text {
+    /* Create 3 vertical text columns */
+    column-count: 3;
+    /* Gap between columns */
+    column-gap: 2rem;
+    /* Add a vertical line between columns */
+    column-rule: 1px solid #ddd;
+    text-align: justify;
+}
+
+/* Paragraph styling */
+.column-text p {
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.9;
+}
+
+/* Prevent orphans and widows for better readability */
+.column-text p {
+    orphans: 3;
+    widows: 3;
+}
+
+/* Page footer */
+.page-footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* Responsive design for tablets and mobile */
+@media (max-width: 1024px) {
+    .magazine-container {
+        padding: 0 1.5rem 2rem;
+    }
+
+    .column-text {
+        /* Reduce to 2 columns on tablets */
+        column-count: 2;
+        column-gap: 1.5rem;
+    }
+
+    .featured-image {
+        width: 250px;
+        height: 167px;
+        margin-right: 1.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .magazine-heading {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .magazine-container {
+        padding: 0 1rem 2rem;
+    }
+
+    .column-text {
+        /* Single column on small screens */
+        column-count: 1;
+        text-align: left;
+    }
+
+    .featured-image {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    .page-header {
+        padding: 2rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .magazine-heading {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .magazine-container {
+        padding: 0 0.5rem 1.5rem;
+    }
+
+    .page-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 0.9rem;
+    }
+
+    .magazine-heading {
+        font-size: 1.3rem;
+    }
+
+    .column-text {
+        font-size: 0.95rem;
+    }
+
+    .column-text p {
+        margin-bottom: 0.8rem;
+    }
+}

@@ -1,0 +1,202 @@
+/* 
+   Question 2: Multi-Section Informational Webpage CSS
+   Demonstrates gradients, parallax effects, and semantic HTML styling
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Header with linear gradient background */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-bottom: 4px solid #764ba2;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navigation bar */
+.nav {
+    background-color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #34495e;
+}
+
+/* Main content spacing */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section base styles */
+.section {
+    padding: 4rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Section 1: Overview with Linear Gradient Background */
+.overview-section {
+    background: linear-gradient(to right, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 5rem 2rem;
+}
+
+.overview-section h2,
+.overview-section p {
+    color: white;
+}
+
+/* Section 2: Culture with Parallax Effect */
+.culture-section.parallax {
+    background-image: url('https://via.placeholder.com/1200x400?text=Culture+Art');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 6rem 2rem;
+}
+
+.culture-section.parallax .content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Section 3: Attractions with Radial Gradient */
+.attractions-section {
+    background: radial-gradient(circle at 50% 50%, #ffd89b 0%, #19547b 100%);
+    padding: 5rem 2rem;
+}
+
+.attractions-section h2 {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.attractions-list {
+    list-style: none;
+    padding: 0;
+}
+
+.attractions-list li {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-left: 5px solid #19547b;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.attractions-list strong {
+    color: #19547b;
+}
+
+/* Section 4: Cuisine with Parallax Effect */
+.cuisine-section.parallax {
+    background-image: url('https://via.placeholder.com/1200x400?text=French+Cuisine');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 6rem 2rem;
+}
+
+.cuisine-section.parallax .content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav a {
+        flex: 1;
+        border-bottom: 1px solid #34495e;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Disable parallax on mobile for better performance */
+    .parallax {
+        background-attachment: scroll;
+    }
+}

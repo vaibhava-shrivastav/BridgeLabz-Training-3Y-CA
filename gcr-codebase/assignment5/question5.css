@@ -1,0 +1,229 @@
+/* 
+   Question 5: Pricing Table CSS
+   Demonstrates flexbox, hover effects, transitions, and responsive grid
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Pricing container using flexbox */
+.pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+
+/* Individual pricing plan card */
+.pricing-plan {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    width: 320px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 2px solid transparent;
+    /* Smooth transition for all properties */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on pricing plans */
+.pricing-plan:hover {
+    /* Slightly enlarges the box */
+    transform: translateY(-10px) scale(1.02);
+    /* Enhances shadow on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: #667eea;
+    background-color: #f8f9ff;
+}
+
+/* Popular/Most Popular plan styling */
+.pricing-plan.popular {
+    border: 3px solid #667eea;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+    /* Scale up the most popular plan slightly */
+    transform: scale(1.05);
+}
+
+.pricing-plan.popular:hover {
+    transform: translateY(-10px) scale(1.07);
+}
+
+/* Popular badge */
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Plan title */
+.pricing-plan h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.pricing-plan.popular h2 {
+    color: #667eea;
+}
+
+/* Price styling */
+.price {
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.3rem;
+}
+
+.currency {
+    font-size: 1.5rem;
+    color: #667eea;
+}
+
+.amount {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.period {
+    font-size: 1rem;
+    color: #999;
+}
+
+/* Features list */
+.features {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.features li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.features li:last-child {
+    border-bottom: none;
+}
+
+/* CTA Button styling as link */
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #667eea;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    /* Smooth transition for button states */
+    transition: all 0.3s ease;
+    border: 2px solid #667eea;
+}
+
+.cta-button:hover {
+    background-color: #764ba2;
+    border-color: #764ba2;
+    transform: scale(1.05);
+}
+
+.pricing-plan.popular .cta-button {
+    background-color: #764ba2;
+    border-color: #764ba2;
+}
+
+.pricing-plan.popular .cta-button:hover {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .pricing-container {
+        gap: 1.5rem;
+    }
+
+    .pricing-plan {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-plan {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .pricing-plan.popular {
+        transform: scale(1);
+    }
+
+    .pricing-plan.popular:hover {
+        transform: translateY(-10px) scale(1.02);
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+}
