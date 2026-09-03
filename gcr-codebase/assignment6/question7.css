@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a2e;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 12px;
+    height: 80px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #e94560;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.circle1 {
+    animation-delay: 0s;
+}
+
+.circle2 {
+    animation-delay: 0.2s;
+}
+
+.circle3 {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+}

@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8ecf1;
+    color: #333;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+    gap: 0;
+}
+
+.dash-header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 1.2rem 2rem;
+}
+
+.dash-header h1 {
+    font-size: 1.5rem;
+}
+
+.dash-header span {
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #16213e;
+    padding: 1.5rem 0;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-nav a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.side-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.dash-main {
+    grid-area: main;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.box-wide {
+    grid-column: span 2;
+}
+
+.box h3 {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.box p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .dash-main {
+        grid-template-columns: 1fr;
+    }
+
+    .box-wide {
+        grid-column: span 1;
+    }
+}

@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    padding: 2rem;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #1a1a2e;
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.photo figcaption {
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    text-align: center;
+    background-color: #fff;
+}

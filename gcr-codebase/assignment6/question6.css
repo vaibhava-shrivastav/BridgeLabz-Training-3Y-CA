@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.blog-layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 0;
+}
+
+.blog-header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 1.2rem 2rem;
+}
+
+.blog-header h1 {
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 0.6rem 0;
+    font-size: 1rem;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar ul li:hover {
+    color: #1a1a2e;
+}
+
+.blog-main {
+    grid-area: main;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.post h2 {
+    font-size: 1.4rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+}
+
+.post .meta {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 1rem;
+}
+
+.post p:last-child {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.blog-footer {
+    grid-area: footer;
+    background-color: #1a1a2e;
+    color: #ccc;
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 800px) {
+    .blog-layout {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-top: 1px solid #ddd;
+    }
+
+    .blog-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
