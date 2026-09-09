@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: Arial, sans-serif; color: #19324a; background: #f7f3eb; }
+main { width: min(100%, 950px); padding: 2rem; text-align: center; }
+.eyebrow { color: #bd542f; text-transform: uppercase; letter-spacing: .16em; }
+h1 { margin: .3rem 0; font: 700 clamp(2.5rem, 7vw, 5rem) Georgia, serif; }
+.buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 3rem; }
+button { min-width: 145px; padding: .9rem 1.3rem; border: 2px solid transparent; border-radius: 8px; box-shadow: 0 5px 0 rgba(25, 50, 74, .18); font: inherit; cursor: pointer; transition: all .25s ease; }
+button:hover { transform: translateY(-3px); box-shadow: 0 8px 0 rgba(25, 50, 74, .18); }
+button:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(25, 50, 74, .18); }
+button:focus { outline: 3px solid #e6b655; outline-offset: 4px; }
+.primary { color: #fff; background: #bd542f; }
+.secondary { color: #fff; background: #287a78; }
+.outline { color: #19324a; border-color: #19324a; background: transparent; }
+button:disabled { color: #89949a; background: #d7dedb; border-color: #b7c2bd; box-shadow: none; cursor: not-allowed; }
+button:disabled:hover { transform: none; }

@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; font-family: Arial, sans-serif; color: #24313f; background: #e9f0ed; }
+header, footer { padding: 1.5rem clamp(1rem, 8vw, 7rem); color: #fff; background: #19324a; }
+header p { color: #f2d47c; text-transform: uppercase; letter-spacing: .15em; }
+h1 { margin: .25rem 0; font: 700 clamp(2rem, 6vw, 4rem) Georgia, serif; }
+main { flex: 1; width: min(100%, 850px); margin: auto; padding: 3rem 1.5rem; }
+.lesson { padding: 2rem; border: 2px solid #789b83; border-radius: 10px; background: #fffdf8; }
+/* Element selector: all list items share a base rule. */
+li { padding: .7rem; margin: .4rem 0; }
+/* Class selector: targets reusable class names. */
+.class-example { color: #287a78; font-weight: bold; }
+/* ID selector: targets one unique element. */
+#id-example { color: #bd542f; }
+/* Attribute selector: targets a matching attribute. */
+li[data-kind="attribute"] { background: #f2d47c; }
+/* Descendant selector: paragraphs inside the relationship box. */
+.relationships p { line-height: 1.6; }
+/* Child combinator: direct children get an inset border. */
+.lesson > h2 { border-bottom: 2px solid #d9b978; }
+/* Adjacent sibling combinator. */
+.relationships p + p { padding-left: 1rem; border-left: 4px solid #287a78; }
+/* General sibling combinator. */
+.relationships p ~ p { color: #bd542f; }
+a { color: #19324a; font-weight: bold; }
+footer { text-align: center; }

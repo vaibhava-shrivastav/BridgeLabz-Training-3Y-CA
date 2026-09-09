@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 1.5rem; font-family: Arial, sans-serif; color: #19324a; background: linear-gradient(135deg, #dfeef0, #f5e7bd); }
+.ui-card { width: min(100%, 700px); padding: clamp(1.5rem, 6vw, 3.5rem); border: 1px solid rgba(255,255,255,.7); border-radius: 16px; background: rgba(255,253,248,.9); box-shadow: 0 18px 45px rgba(25,50,74,.16); }
+.eyebrow { color: #bd542f; text-transform: uppercase; letter-spacing: .16em; }
+h1 { margin: .3rem 0 2rem; font: 700 clamp(2rem, 6vw, 4.2rem) Georgia, serif; }
+.search, .actions { display: flex; flex-direction: column; gap: .55rem; }
+.search > div, .actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: end; }
+input, select, button { padding: .8rem 1rem; border: 2px solid #789b83; border-radius: 7px; font: inherit; }
+input { flex: 1; min-width: 180px; }
+button { color: #fff; background: #287a78; cursor: pointer; transition: background .25s ease, transform .25s ease; }
+button:hover { background: #bd542f; transform: translateY(-2px); }
+input:focus, select:focus { outline: 3px solid #e6b655; outline-offset: 3px; }
+.actions { margin-top: 2rem; flex-direction: row; }
+.actions .quiet { color: #19324a; background: transparent; }
+.actions label { display: flex; flex-direction: column; gap: .4rem; margin-left: auto; }

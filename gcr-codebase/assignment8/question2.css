@@ -1,0 +1,10 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: 'Trebuchet MS', sans-serif; color: #19324a; background: linear-gradient(135deg, #dfeef0, #f7f3eb); }
+main { width: min(100%, 900px); padding: 2rem; text-align: center; }
+.eyebrow { color: #bd542f; text-transform: uppercase; letter-spacing: .16em; }
+h1 { margin: .3rem 0; font: 700 clamp(2.5rem, 7vw, 5rem) Georgia, serif; }
+.tooltip-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 4rem; }
+.tip-item { position: relative; padding: 1rem 1.4rem; border: 2px solid #287a78; border-radius: 8px; color: #fff; background: #287a78; cursor: help; }
+.tooltip { position: absolute; bottom: calc(100% + 14px); left: 50%; width: max-content; max-width: 190px; padding: .65rem .8rem; transform: translate(-50%, 6px); border-radius: 5px; color: #fff; background: #24313f; opacity: 0; pointer-events: none; transition: opacity .3s ease-in-out, transform .3s ease-in-out; }
+.tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; border: 6px solid transparent; border-top-color: #24313f; transform: translateX(-50%); }
+.tip-item:hover .tooltip { opacity: 1; transform: translate(-50%, 0); }

@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 2rem; font-family: Arial, sans-serif; color: #24313f; background: #f5f0e8; }
+main { width: min(100%, 900px); text-align: center; }
+.eyebrow { color: #bd542f; text-transform: uppercase; letter-spacing: .16em; }
+h1 { margin: .3rem 0; font: 700 clamp(2.2rem, 6vw, 4.8rem) Georgia, serif; }
+.comparison { display: flex; justify-content: center; gap: 2rem; margin-top: 3rem; }
+.comparison article { width: 280px; padding: 2rem; border: 8px solid #19324a; border-radius: 10px; text-align: left; }
+.content-box { box-sizing: content-box; background: #f2d47c; }
+.border-box { box-sizing: border-box; background: #a9d3b7; }
+.measure { padding: .7rem; margin: 1rem 0; border: 2px dashed #bd542f; font-weight: bold; }
+.comparison p { line-height: 1.6; }
+@media (max-width: 700px) { .comparison { flex-direction: column; align-items: center; } }

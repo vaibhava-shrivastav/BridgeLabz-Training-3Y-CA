@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; font-family: Arial, sans-serif; color: #24313f; background: #f5f0e8; }
+main { max-width: 1100px; margin: auto; padding: 3rem 1.5rem; }
+header { text-align: center; margin-bottom: 2.5rem; }
+.eyebrow { color: #bd542f; text-transform: uppercase; letter-spacing: .16em; }
+h1 { margin: .3rem 0; font: 700 clamp(2.5rem, 7vw, 5rem) Georgia, serif; }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+figure { margin: 0; overflow: hidden; border-radius: 10px; background: #fffdf8; box-shadow: 0 8px 22px rgba(36, 49, 63, .14); }
+.image { position: relative; aspect-ratio: 4 / 3; transition: transform .4s ease, filter .4s ease; }
+.image::after { content: ''; position: absolute; inset: 0; background: rgba(12, 24, 36, .28); opacity: 0; transition: opacity .4s ease; }
+figure:hover .image { transform: scale(1.1); filter: brightness(.75); }
+figure:hover .image::after { opacity: 1; }
+.image-one { background: linear-gradient(135deg, #e7b65a, #bd542f); }
+.image-two { background: linear-gradient(45deg, #19324a 50%, #d9b978 50%); }
+.image-three { background: linear-gradient(#dfeef0 48%, #287a78 49%); }
+.image-four { background: linear-gradient(120deg, #bd542f, #f2d47c); }
+.image-five { background: radial-gradient(circle at 70% 25%, #f2d47c, #287a78 35%, #19324a); }
+.image-six { background: linear-gradient(145deg, #789b83, #dfeef0 50%, #287a78); }
+figcaption { padding: .9rem 1rem; font-weight: bold; }
+@media (max-width: 700px) { .gallery { grid-template-columns: 1fr; } }

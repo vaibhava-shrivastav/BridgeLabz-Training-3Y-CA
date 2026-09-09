@@ -1,0 +1,11 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: Arial, sans-serif; color: #19324a; background: #e9f0ed; }
+main { width: min(100%, 950px); padding: 2rem; text-align: center; }
+.eyebrow { color: #bd542f; text-transform: uppercase; letter-spacing: .16em; }
+h1 { margin: .3rem 0; font: 700 clamp(2.3rem, 6vw, 4.8rem) Georgia, serif; }
+.effect-row { display: flex; flex-wrap: wrap; justify-content: space-evenly; gap: 1.5rem; margin-top: 4rem; }
+.effect { min-width: 150px; padding: 1rem 1.5rem; border: 2px solid transparent; border-radius: 8px; color: #fff; font: inherit; cursor: pointer; box-shadow: 0 7px 0 rgba(25,50,74,.17); transition: all .35s ease; }
+.effect:hover { transform: translateY(-7px) scale(1.06); box-shadow: 0 14px 20px rgba(25,50,74,.2); }
+.effect:active { transform: translateY(2px) scale(.98); }
+.effect:focus { outline: 3px solid #e6b655; outline-offset: 4px; }
+.warm { background: #bd542f; } .cool { background: #287a78; } .bright { color: #19324a; background: #f2d47c; }

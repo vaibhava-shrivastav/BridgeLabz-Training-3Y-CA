@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; font-family: Arial, sans-serif; color: #19324a; background: #f5f0e8; }
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem clamp(1rem, 7vw, 6rem); border-bottom: 1px solid #d7c8b3; }
+.brand { color: #bd542f; font-size: 1.35rem; font-weight: bold; text-decoration: none; }
+nav { display: flex; gap: 1.2rem; } nav a { color: #19324a; text-decoration: none; } nav a:hover { color: #bd542f; }
+main { flex: 1; display: grid; place-items: center; padding: 3rem 1.5rem; }
+.content-card { width: min(100%, 900px); display: flex; align-items: center; gap: 3rem; padding: clamp(1.5rem, 6vw, 4rem); border: 1px solid #d7c8b3; border-radius: 14px; background: #fffdf8; box-shadow: 0 18px 40px rgba(25,50,74,.12); }
+.copy { flex: 1; } .eyebrow { color: #bd542f; text-transform: uppercase; letter-spacing: .16em; } h1 { margin: .4rem 0 1rem; font: 700 clamp(2rem, 5vw, 4.2rem)/1.05 Georgia, serif; } .copy > p { line-height: 1.7; }
+form { display: grid; gap: 1rem; margin-top: 2rem; } label { display: grid; gap: .4rem; font-weight: bold; } input { padding: .85rem; border: 2px solid #789b83; border-radius: 7px; font: inherit; } input:focus { outline: 3px solid #e6b655; outline-offset: 3px; }
+.form-actions { display: flex; gap: .75rem; } button { padding: .8rem 1.1rem; border: 2px solid #287a78; border-radius: 7px; color: #fff; background: #287a78; font: inherit; cursor: pointer; transition: all .25s ease; } button:hover { transform: translateY(-2px); background: #bd542f; } button:focus { outline: 3px solid #e6b655; outline-offset: 3px; } .secondary { color: #19324a; background: transparent; }
+.art { position: relative; width: 230px; aspect-ratio: 1; border-radius: 50%; background: #dfeef0; } .art::before, .art::after, .art span { content: ''; position: absolute; display: block; width: 120px; height: 155px; border: 5px solid #19324a; border-radius: 5px; background: #f2d47c; transform: rotate(-15deg); } .art::before { top: 25px; left: 45px; background: #bd542f; transform: rotate(12deg); } .art::after { top: 42px; left: 55px; background: #fffdf8; transform: rotate(-4deg); } .art span { top: 62px; left: 65px; background: #287a78; transform: rotate(8deg); }
+footer { padding: 1rem; border-top: 1px solid #d7c8b3; text-align: center; } @media (max-width: 700px) { .topbar, .content-card { flex-direction: column; align-items: stretch; } nav { justify-content: space-between; width: 100%; } .art { align-self: center; width: 180px; } }
