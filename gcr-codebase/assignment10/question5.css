@@ -1,0 +1,9 @@
+/* Bootstrap cards and columns keep the blog responsive. */
+:root { --bs-primary: #d24f35; --bs-primary-rgb: 210,79,53; --bs-font-sans-serif: 'DM Sans', sans-serif; }
+body { font-family: var(--bs-font-sans-serif); color: #282421; }
+h1, h2, .navbar-brand { font-family: 'Playfair Display', serif; }
+.kicker { color: var(--bs-primary); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
+.card { border: 0; background: #f8eee7; transition: transform .2s ease; }
+.card:hover { transform: translateY(-5px); }
+.card img { height: 240px; object-fit: cover; }
+footer { background: #282421; color: white; }

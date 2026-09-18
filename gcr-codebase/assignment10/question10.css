@@ -1,0 +1,9 @@
+/* Bootstrap carousel controls the timed destination slideshow. */
+body { color: #172b3a; }
+.brand { color: white; font-weight: 800; letter-spacing: .16em; text-decoration: none; }
+.carousel-item { height: min(78vh, 720px); min-height: 520px; }
+.carousel-item img { height: 100%; object-fit: cover; filter: brightness(.62); }
+.carousel-caption { bottom: 18%; text-align: left; max-width: 760px; margin: auto; left: 10%; right: 10%; }
+.carousel-caption h1 { letter-spacing: -.04em; }
+.progress { height: 1.25rem; }
+@media (max-width: 576px) { .carousel-caption h1 { font-size: 2.5rem; } .carousel-caption p.lead { font-size: 1rem; } }

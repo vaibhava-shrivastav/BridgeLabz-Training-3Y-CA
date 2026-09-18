@@ -1,0 +1,5 @@
+/* Bootstrap cards and col-md-4 create the responsive pricing row. */
+body { background: #f5f7fb; color: #172033; }
+.pricing-card { border: 0; transition: transform .25s ease, box-shadow .25s ease; }
+.pricing-card:hover { transform: translateY(-8px); box-shadow: 0 1rem 2rem rgba(30,50,90,.13) !important; }
+.featured { background: #2454d4; color: white; }

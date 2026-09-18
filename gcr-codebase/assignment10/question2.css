@@ -1,0 +1,4 @@
+/* Bootstrap utility classes handle spacing, type, and backgrounds. */
+body { font-family: system-ui, sans-serif; }
+.profile-image { width: min(280px, 70vw); aspect-ratio: 1; object-fit: cover; border: 10px solid white; box-shadow: 0 1rem 2rem rgba(30,40,50,.12); }
+.btn { border-radius: 0; }

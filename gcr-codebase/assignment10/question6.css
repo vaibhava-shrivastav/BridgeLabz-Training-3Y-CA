@@ -1,0 +1,4 @@
+/* Bootstrap alert variants communicate each notification state. */
+body { background: #f3f6fa; color: #172333; }
+.card { border: 0; }
+.summary-well { border-color: #d9e1eb !important; }

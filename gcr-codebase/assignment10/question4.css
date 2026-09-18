@@ -1,0 +1,5 @@
+/* Bootstrap table and list-group styles do the component heavy lifting. */
+body { color: #352b22; background: #fffaf2; }
+header { background: #f3d59b; }
+header h1 { font-family: Georgia, serif; font-style: italic; }
+.table { --bs-table-bg: transparent; }

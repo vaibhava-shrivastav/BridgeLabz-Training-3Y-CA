@@ -1,0 +1,5 @@
+/* Bootstrap pagination utilities center the archive navigation. */
+body { color: #20252c; font-family: Georgia, serif; }
+.pagination, .btn, small, footer { font-family: system-ui, sans-serif; }
+.page-link { color: #20252c; }
+.page-item.active .page-link { background: #20252c; border-color: #20252c; }

@@ -1,0 +1,6 @@
+/* Bootstrap shadow-sm cards gain a small product hover lift here. */
+body { background: #f5f4ef; color: #1e2a24; }
+.brand { color: inherit; font-weight: 800; letter-spacing: .15em; text-decoration: none; }
+.product-card { border: 0; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 1rem 2rem rgba(20,40,25,.15) !important; }
+.product-card img { height: 220px; object-fit: cover; }

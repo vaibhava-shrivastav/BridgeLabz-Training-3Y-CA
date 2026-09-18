@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 9 - Responsive Design Principles</title>
+    <link rel="stylesheet" href="question9.css" />
+  </head>
+  <body>
+    <main class="principles">
+      <h1>Responsive Design Principles</h1>
+
+      <section class="principle-grid">
+        <article class="principle-box">
+          <h2>Fluid Layouts</h2>
+          <p>Use flexible widths so page sections adapt smoothly across devices.</p>
+          <pre>.container {
+  width: 100%;
+  max-width: 1200px;
+}</pre>
+        </article>
+
+        <article class="principle-box">
+          <h2>Flexible Media</h2>
+          <p>Images and video should resize proportionally to fit their containers.</p>
+          <pre>img {
+  max-width: 100%;
+  height: auto;
+}</pre>
+        </article>
+
+        <article class="principle-box">
+          <h2>Breakpoints</h2>
+          <p>Apply media queries to adjust layout and spacing at key screen sizes.</p>
+          <pre>@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}</pre>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

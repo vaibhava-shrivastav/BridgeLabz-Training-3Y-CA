@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6ff;
+  color: #20283d;
+}
+
+.comparison-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.comparison-wrap h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.comparison {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.compare-item {
+  flex: 1;
+  margin: 0;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 26px rgba(32, 40, 61, 0.08);
+}
+
+.compare-item img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.compare-item figcaption {
+  text-align: center;
+  padding: 0.9rem;
+  font-weight: 700;
+}
+
+.after img {
+  filter: brightness(0.7) contrast(1.4);
+  transition: filter 0.4s ease;
+}
+
+.after:hover img {
+  filter: none;
+}
+
+@media (max-width: 700px) {
+  .comparison {
+    flex-direction: column;
+  }
+}

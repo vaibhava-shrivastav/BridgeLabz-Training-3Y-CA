@@ -1,0 +1,10 @@
+/* Bootstrap grid classes provide the responsive page structure. */
+:root { --ink: #152b2a; --mint: #b9f3d0; }
+body { color: var(--ink); font-family: Georgia, serif; }
+.site-header, .hero { background: #152b2a; color: white; }
+.navbar-brand { letter-spacing: .08em; text-transform: uppercase; }
+.navbar-brand span, .eyebrow { color: var(--mint); }
+.eyebrow { font-family: system-ui, sans-serif; text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; }
+.hero h1 { max-width: 760px; letter-spacing: -.04em; }
+.hero-art { min-height: 300px; border: 1px solid rgba(255,255,255,.3); border-radius: 50%; display: grid; place-items: center; font-size: 8rem; color: var(--mint); transform: rotate(-15deg); }
+.hero-art span { font: 700 1rem system-ui, sans-serif; color: white; }
